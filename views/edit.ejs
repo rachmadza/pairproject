@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div style="text-align: center; padding-top: 100px;">
+
+    <form action="/menu/job/edit/<%= data.id %>" method="post">
+      Name <br>
+      <input type="text" name="name" value="<%= data.name %>">
+      <br>
+      <br>Category<br>
+      <select name="category">
+        <option value="pharmacist">
+          Pharmacist
+        </option>
+        <option value="accounting">
+          Accounting
+        </option>
+        <option value="it">
+          IT
+        </option>
+      </select>
+      <br><br>
+      Requirment<br>
+      <input type="text" name="requirement" placeholder="put your score" value="<%= data.requirement %>">
+      <br><br>
+      <input type="submit" value="Submit">
+      <br>
+      <input type="text" name="fk" value="<%= data.CompanyId %>" hidden>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
