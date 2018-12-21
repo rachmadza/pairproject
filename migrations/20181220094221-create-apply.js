@@ -1,38 +1,30 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Jobs', {
+    return queryInterface.createTable('Applies', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      category: {
-        type: Sequelize.STRING
-      },
-      requirement: {
+      UserId: {
         type: Sequelize.INTEGER
       },
-      CompanyId: {
+      JobId: {
         type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: new Date
+        type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE,
-        defaultValue: new Date
+        type: Sequelize.DATE
       }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Jobs');
+    return queryInterface.dropTable('Applies');
   }
 };
